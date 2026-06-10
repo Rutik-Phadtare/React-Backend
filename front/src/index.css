@@ -1,0 +1,27 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #020202; /* Light neutral background for better card pop */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container Layout */
+.card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; 
+  align-items: stretch; /* Cards stretch to equal height */   
+  gap: 24px;               
+  flex-wrap: wrap;         
+  padding: 40px 20px;
+}

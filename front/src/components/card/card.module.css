@@ -1,0 +1,103 @@
+
+/* Card Styling */
+.card {
+  width: 280px;
+  flex: 1;                 
+  min-width: 280px;        
+  max-width: 340px; 
+  background-color: #ffffffe0; /* Clean white background */
+  border-radius: 16px;
+  padding: 32px 24px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  
+  /* Flexbox inside the card to stack and center contents vertically */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  
+  /* Smooth interaction animations */
+  will-change: transform, box-shadow; 
+  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), 
+              box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+/* Hover State */
+.card:hover {
+  transform: translateY(-4px); /* Professional lift effect instead of scale */
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Card Elements */
+.card img {
+  width: 110px;
+  height: 110px;
+  object-fit: cover; /* Prevents image stretching */
+  border-radius: 50%; /* Perfect circle */
+  margin-bottom: 20px;
+  border: 4px solid #f0f2f5;
+}
+
+.card h3 {
+  color: #1a1a1a;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.card p {
+  color: #666666;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 24px;
+  flex-grow: 1; /* Pushes the button to the bottom if content sizes vary */
+}
+
+/* Interactive Button */
+.card button {
+  align-items: center;
+  width: 100%;
+  padding: 12px 24px;
+  background-color: #4f46e5;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.card button:hover {
+  background-color: #4338ca;
+}
+
+.card button:active {
+  transform: scale(0.98);
+}
+
+
+
+
+/* Base styling for your profile image */
+.profile-img {
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+}
+
+.shake {
+  animation: shakeAnimation 0.4s ease-in-out;
+}
+
+@keyframes shakeAnimation {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-8px); }
+  40%, 80% { transform: translateX(8px); }
+}
+
+
