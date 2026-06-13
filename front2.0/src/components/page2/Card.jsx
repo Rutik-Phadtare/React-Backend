@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
 
 const Card = (props) => {
+  function fun(val){
+    console.log(val);
+  }
   return (
     <motion.div
       className="
@@ -37,14 +40,18 @@ const Card = (props) => {
       }}
     >
       <motion.img
-        className="absolute inset-0 object-cover w-full h-full z-0"
+        className="absolute inset-0 object-cover w-full h-full z-0" onMouseEnter={()=>{
+          console.log("hi")
+        }}
         src={props.sr}
         alt="Trip Package"
         whileHover={{ scale: 1.1 }}
         transition={{ duration: 0.4 }}
       />
 
-      <div className="relative z-10 mt-70 bg-black/40 p-4 rounded-lg backdrop-blur-sm">
+      <div className="relative z-10 mt-70 bg-black/40 p-4 rounded-lg backdrop-blur-sm" onMouseEnter={function(val){
+        fun(val.target);
+      }}>
         <h1 className="text-2xl font-bold">TYP N1</h1>
         <h3 className="text-sm">Trip package one on one.</h3>
       </div>

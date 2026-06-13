@@ -11,6 +11,8 @@ import Pagee2 from "./components/page2/Pagee2"
     {sr:"https://plus.unsplash.com/premium_photo-1722872927967-08944f79a652?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}
   ]
 const App = () => {
+
+  
   console.log(imag);
   const { scrollYProgress } = useScroll()
   
